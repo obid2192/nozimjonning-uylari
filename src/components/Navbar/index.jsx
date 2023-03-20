@@ -1,12 +1,10 @@
 import React from "react";
 import "./style.css";
-import { Nav, Container, Logo, Kirish, Menu } from "./stayle";
+import { Container, Logo, Kirish, Menu } from "./stayle";
 import { Outlet, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const Activ = (url) => {
-    return window.location.pathname.includes(url);
-  };
+
   return (
     <div>
       <Container>
