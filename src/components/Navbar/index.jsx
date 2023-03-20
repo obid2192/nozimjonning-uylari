@@ -1,23 +1,32 @@
 import React from "react";
-import { Link, Container, Logo, Kirish, Menu } from "./stayle";
+import "./style.css";
+import { Nav, Container, Logo, Kirish, Menu } from "./stayle";
 import { Outlet, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
+  const Activ = (url) => {
+    return window.location.pathname.includes(url);
+  };
   return (
     <div>
       <Container>
-        <NavLink to={"/"}>
+        <NavLink className={'nav'} to={"/"}>
           <Logo>Logo</Logo>
         </NavLink>
 
-        <Link to={"/"}>Home</Link>
-        <Link to={"/body"}>Body</Link>
-        <Link to={"/contact"}>Contact</Link>
-        <Link to={"/footer"}>Footer</Link>
+        <NavLink 
+          className={({ isActive }) => (isActive ? "active" : "nav")}
+          to={"/"}
+        >
+          Home
+        </NavLink>
+        <NavLink className={'nav'} to={"/body"}>Body</NavLink>
+        <NavLink className={'nav'} to={"/contact"}>Contact</NavLink>
+        <NavLink className={'nav'} to={"/footer"}>Footer</NavLink>
         <Kirish>
           <Menu>Menu 1</Menu>
           <Menu>Menu 2</Menu>
-          <Menu>Menu 3</Menu>
+        
         </Kirish>
       </Container>
       <Outlet />
