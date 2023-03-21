@@ -2,32 +2,43 @@ import React from "react";
 import "./style.css";
 import { Container, Logo, Kirish, Menu } from "./stayle";
 import { Outlet, NavLink } from "react-router-dom";
+import {Footer} from "../Footer"
 
 export const Navbar = () => {
-
   return (
     <div>
       <Container>
-        <NavLink className={'nav'} to={"/"}>
+        <NavLink className={"nav"} to={"/"}>
           <Logo>Logo</Logo>
         </NavLink>
 
-        <NavLink 
+        <NavLink
           className={({ isActive }) => (isActive ? "active" : "nav")}
           to={"/"}
         >
-          Home
+          Home 1
         </NavLink>
-        <NavLink className={'nav'} to={"/body"}>Body</NavLink>
-        <NavLink className={'nav'} to={"/contact"}>Contact</NavLink>
-        <NavLink className={'nav'} to={"/footer"}>Footer</NavLink>
+        <NavLink className={"nav"} to={"/home2"}>
+          Home 2
+        </NavLink>
+        <NavLink className={"nav"} to={"/home3"}>
+          Home 3
+        </NavLink>
+      
         <Kirish>
-          <Menu>Menu 1</Menu>
-          <Menu>Menu 2</Menu>
-        
+          
+          <NavLink to={"/addhouse"}>
+            {" "}
+            <Menu>Uy Qo'shish</Menu>
+          </NavLink>
+          <NavLink to={"/login"}>
+            {" "}
+            <Menu>Login</Menu>
+          </NavLink>
         </Kirish>
       </Container>
       <Outlet />
+      <Footer />
     </div>
   );
 };
