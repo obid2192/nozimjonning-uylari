@@ -15,7 +15,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
     description,
     category,
     favorite,
-    id,
+    
   } = data;
 
 
