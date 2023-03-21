@@ -1,12 +1,11 @@
 import React from "react";
 import { Container } from "./style";
 import HouseCard from "../HouseCard";
-import { useState } from "react";
 // import { useLocation, useNavigate } from "react-router-dom";
 // import useRequest from "../../hooks/useRequest";
 
 export const Properties = () => {
-  const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   // const { search } = useLocation();
   // const navigate = useNavigate();
   // const request = useRequest();
@@ -28,11 +27,11 @@ export const Properties = () => {
         Yangi qurulayotgan uylar
       </div>
       <Container>
-        {data.map((value) => {
+        {data.map(() => {
           return (
             <HouseCard
               // onClick={() => onSelect(value.id)}
-              key={value.id}
+              // key={value.id}
               // data={value}
             />
           );
