@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: space-between;
   background-color: grey;
   max-width: 1440px;
-  padding: 0 130px;
+  padding: 0 100px;
   height: 50px;
 `;
 

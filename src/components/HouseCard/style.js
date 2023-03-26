@@ -7,14 +7,14 @@ import { ReactComponent as love } from "../../assets/icons/love.svg";
 import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 const Container = styled.div`
-position: relative;
+  position: relative;
   width: 100%;
   max-width: 380px;
   min-width: 330px;
   margin: ${({ gap }) => {
     return gap && `0 ${gap}px`;
   }};
-  height: 430px;
+  height: 490px;
   background: white;
   border: 1px solid #e6e9ec;
   :hover {
@@ -27,17 +27,22 @@ position: relative;
 
 const Img = styled.div`
   width: 100%;
-  height: 220px;
-
+  height: 210px;
 `;
 
 const Content = styled.div`
   display: flex;
-  flex-direction: ${({ footer }) => (footer ? "row" : "column")};
-  justify-content: ${({ footer }) => footer && "space-between"};
-  padding-top: 24px;
-  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
   background: white;
+  height: 20px;
+`;
+const Content1 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  height: 20px;
 `;
 const Details = styled.div`
   display: flex;
@@ -81,4 +86,4 @@ const Divider = styled.div`
   width: 100%;
 `;
 
-export { Container, Img, Content, Details, Icons, Divider };
+export { Container, Img, Content, Content1, Details, Icons, Divider };
