@@ -1,4 +1,6 @@
 import CaruselImg from "./caruseImg";
+// import mertoLogo from '../../assets/logo/metrologo.png'
+// import merto from '../../assets/logo/Metro.png'
 import {
   Bank,
   CardFooter,

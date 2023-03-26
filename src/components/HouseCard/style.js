@@ -16,6 +16,7 @@ export const Container = styled.div`
       drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
       drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   }
+  
   cursor: pointer;
 `;
 
@@ -43,9 +44,9 @@ export const Metro = styled.div`
   align-items: center;
 `;
 export const MetroIcon = styled.div`
-  color: black;
-  font-weight: 800;
-  font-size: 25px;
+ font-size: 22px;
+ font-weight: 700;
+ color: black;
 `;
 export const MetroTitle = styled.div`
   color: red;
