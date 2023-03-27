@@ -27,7 +27,8 @@ import {
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
   const {
-    title
+    title,
+    id
 
   } = data;
 
@@ -51,7 +52,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
   // };
   return (
     // <div style={{ display: "flex" }} onClick={onClick}>
-    <Container gap={gap} className="container">
+    <Container gap={gap} className="container" key={id}>
         <ImgTop>
           <TopText>Topshiriladi 2024 yil</TopText>
 
