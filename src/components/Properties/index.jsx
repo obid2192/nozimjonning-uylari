@@ -5,7 +5,6 @@ import HouseCard from "../HouseCard";
 // import useRequest from "../../hooks/useRequest";
 
 export const Properties = () => {
-  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const [item, setItem] = useState([])
   const [viseblit, setVisiblet] = useState(9)
 
