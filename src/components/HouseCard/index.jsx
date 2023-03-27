@@ -90,12 +90,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
               65.45 m<sup>2</sup> ....... 200 000 000 so'm
             </Price>
           </HousePrice>
-          <HousePrice>
-            <Xona>1 xona</Xona>
-            <Price>
-              65.45 m<sup>2</sup> ....... 200 000 000 so'm
-            </Price>
-          </HousePrice>
+        
         </Content>
         <Line></Line>
         <CardFooter>
