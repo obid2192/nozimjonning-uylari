@@ -73,25 +73,25 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
             <HousePrice>
               <Xona>1 xona</Xona>
               <Price>
-                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+                35.45 m<sup>2</sup> ....... 300 000 000 so'm
               </Price>
             </HousePrice>
             <HousePrice>
-              <Xona>1 xona</Xona>
+              <Xona>2 xona</Xona>
               <Price>
-                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+                54.12 m<sup>2</sup> ....... 500 000 000 so'm
               </Price>
             </HousePrice>
             <HousePrice>
-              <Xona>1 xona</Xona>
+              <Xona>3 xona</Xona>
               <Price>
-                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+                71.95 m<sup>2</sup> ....... 700 000 000 so'm
               </Price>
             </HousePrice>
             <HousePrice>
-              <Xona>1 xona</Xona>
+              <Xona>4 xona</Xona>
               <Price>
-                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+                154.67 m<sup>2</sup> ....... 1 000 000 000 so'm
               </Price>
             </HousePrice>
           </Naxlari>
