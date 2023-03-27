@@ -27,8 +27,8 @@ import {
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
   const {
-    title,
-    id
+    name,
+    email
 
   } = data;
 
@@ -50,9 +50,10 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
   //       state.refetch && state.refetch();
   //     });
   // };
+  
   return (
     // <div style={{ display: "flex" }} onClick={onClick}>
-    <Container gap={gap} className="container" key={id}>
+    <Container gap={gap} className="container" >
         <ImgTop>
           <TopText>Topshiriladi 2024 yil</TopText>
 
@@ -71,7 +72,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
             <MetroText>10 min 1.5 km</MetroText>
           </Metro>
           <HouseAddress>
-           {title} 
+           {name} 
           </HouseAddress>
           <HousePrice>
             <Xona>1 xona</Xona>
@@ -95,7 +96,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
         </Content>
         <Line></Line>
         <CardFooter>
-          <FooterText>Dasturchi Kampaniya</FooterText>
+          <FooterText>{email}</FooterText>
           <FooterButton>+99899182192 </FooterButton>
         </CardFooter>
       </TextCard>

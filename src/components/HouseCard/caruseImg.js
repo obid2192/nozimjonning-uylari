@@ -31,8 +31,8 @@ export default function CaruselTmg() {
         className="mySwiper"
       
       >
-        {img.map((img) => (
-          <SwiperSlide >
+        {img.map((img, index) => (
+          <SwiperSlide key={index}>
             <img src={img} alt='uylarning rasmi' className="imgs"/>
           </SwiperSlide>
         ))}

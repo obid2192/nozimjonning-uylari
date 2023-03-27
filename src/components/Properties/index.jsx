@@ -9,7 +9,7 @@ export const Properties = () => {
   const [viseblit, setVisiblet] = useState(9)
 
   useEffect (() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
+    fetch('https://jsonplaceholder.typicode.com/comments')
     .then(response => response.json())
     .then(json => setItem(json))
   }, [])
@@ -37,6 +37,7 @@ const showMoreItem = () => {
       </div>
       <Container>
         {item.slice(0, viseblit).map((value) => {
+          
           return (
             <HouseCard
               // onClick={() => onSelect(value.id)}
