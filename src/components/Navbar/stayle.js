@@ -25,6 +25,6 @@ export const Kirish = styled.div`
 `;
 export const Menu = styled.div`
   color: black;
-  margin: 0 20px;
+  margin-left: 40px;
   text-decoration: none;
 `;

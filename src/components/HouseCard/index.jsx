@@ -12,6 +12,8 @@ import {
   HouseAddress,
   HousePrice,
   Img,
+  Icons,
+  ImgTop,
   Line,
   Metro,
   MetroIcon,
@@ -20,6 +22,7 @@ import {
   Price,
   TextCard,
   Xona,
+  TopText,
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
   // const {
@@ -33,15 +36,38 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
 
   // } = data;
 
+  // const save = (event) => {
+  //   event?.stopPropagation();
+  //   fetch(
+  //     `https://houzing-app.herokuapp.com/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
+  //     {
+  //       method: "PUT",
+  //       headers: {
+  //         Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //       },
+  //     }
+  //   )
+  //     .then((res) => res.json())
+  //     .then((res) => {
+  //       if (favorite) res?.success && message.warning("Successfully disliked");
+  //       else res?.success && message.info("Successfully liked");
+  //       state.refetch && state.refetch();
+  //     });
+  // };
   return (
     // <div style={{ display: "flex" }} onClick={onClick}>
-    <Container gap={gap}>
+    <Container gap={gap} className="container">
+        <ImgTop>
+          <TopText>Topshiriladi 2024 yil</TopText>
+
+          <Icons.Love favorite={"favorite"} />
+        </ImgTop>
       <Img>
         <CaruselImg />
       </Img>
       <TextCard>
         <Content>
-          <Bank></Bank>
+          <Bank>Ipateka 16%</Bank>
           <Header>O'zbegim</Header>
           <Metro>
             <MetroIcon>M</MetroIcon>

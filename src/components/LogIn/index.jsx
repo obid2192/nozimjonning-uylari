@@ -28,6 +28,9 @@ export const Login = () => {
       <br />
       <br />
       <button onClick={onSave}>Submit</button>
+      <br />
+      <p>login: obid</p>
+      <p>parol: 12345</p>
     </>
   );
 };

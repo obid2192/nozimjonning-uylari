@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as love } from "../../assets/icons/love.svg";
 
 export const Container = styled.div`
   position: relative;
@@ -16,7 +17,7 @@ export const Container = styled.div`
       drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
       drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   }
-  
+
   cursor: pointer;
 `;
 
@@ -36,6 +37,7 @@ export const Content = styled.div`
 export const Header = styled.div`
   font-size: 25px;
   font-weight: 600;
+  margin-top: 20px;
   margin-bottom: 5px;
 `;
 
@@ -44,9 +46,9 @@ export const Metro = styled.div`
   align-items: center;
 `;
 export const MetroIcon = styled.div`
- font-size: 22px;
- font-weight: 700;
- color: black;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
 `;
 export const MetroTitle = styled.div`
   color: red;
@@ -70,20 +72,26 @@ export const Price = styled.div`
 `;
 export const HouseAddress = styled.div`
   color: gray;
+  font-size: 13px;
   margin-bottom: 5px;
 `;
 export const Bank = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: white;
   width: 100px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: green;
+  height: 25px;
+  border-radius: 15px;
+  background-color: blue;
 `;
 
 export const Line = styled.div`
-width: 100%;
-height: 1px;
-background-color: gray;
-`
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+`;
 export const CardFooter = styled.div`
   padding: 10px;
   display: flex;
@@ -91,14 +99,49 @@ export const CardFooter = styled.div`
   align-items: center;
   /* width: 100%; */
   height: 20px;
-  margin-top: 5px;
+  margin-top: 10px;
 `;
 export const FooterText = styled.div``;
 export const FooterButton = styled.button`
   outline: none;
+  color: white;
   border: none;
   border-radius: 3px;
   height: 25px;
   width: 120px;
-  background-color: yellow;
+  background-color: crimson;
+`;
+export const ImgTop = styled.div`
+position: absolute;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 9;
+`;
+export const Icons = styled.div``;
+export const TopText = styled.div`
+color: black;
+padding: 5px 10px;
+background-color: white;
+border-radius: 15px;
+font-size: 13px;
+margin: 0 10px;
+
+`;
+
+Icons.Love = styled(love)`
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  /* background: ${({ favorite }) => (favorite ? "red" : "#f6f8f9")}; */
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  & path {
+    fill: ${({ favorite }) => favorite && "white"};
+  }
+  :active {
+    transform: scale(0.9);
+  }
 `;
