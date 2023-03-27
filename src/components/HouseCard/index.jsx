@@ -24,13 +24,10 @@ import {
   TextCard,
   Xona,
   TopText,
+  Naxlari,
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
-  const {
-    name,
-    email
-
-  } = data;
+  const { name, email } = data;
 
   // const save = (event) => {
   //   event?.stopPropagation();
@@ -50,15 +47,15 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
   //       state.refetch && state.refetch();
   //     });
   // };
-  
+
   return (
     // <div style={{ display: "flex" }} onClick={onClick}>
-    <Container gap={gap} className="container" >
-        <ImgTop>
-          <TopText>Topshiriladi 2024 yil</TopText>
+    <Container gap={gap} className="container">
+      <ImgTop>
+        <TopText>Topshiriladi 2024 yil</TopText>
 
-          <Icons.Love favorite={"favorite"} />
-        </ImgTop>
+        <Icons.Love favorite={"favorite"} />
+      </ImgTop>
       <Img>
         <CaruselImg />
       </Img>
@@ -71,28 +68,33 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
             <MetroTitle>Chilonzor</MetroTitle>
             <MetroText>10 min 1.5 km</MetroText>
           </Metro>
-          <HouseAddress>
-           {name} 
-          </HouseAddress>
-          <HousePrice>
-            <Xona>1 xona</Xona>
-            <Price>
-              65.45 m<sup>2</sup> ....... 200 000 000 so'm
-            </Price>
-          </HousePrice>
-          <HousePrice>
-            <Xona>1 xona</Xona>
-            <Price>
-              65.45 m<sup>2</sup> ....... 200 000 000 so'm
-            </Price>
-          </HousePrice>
-          <HousePrice>
-            <Xona>1 xona</Xona>
-            <Price>
-              65.45 m<sup>2</sup> ....... 200 000 000 so'm
-            </Price>
-          </HousePrice>
-        
+          <HouseAddress>{name}</HouseAddress>
+          <Naxlari>
+            <HousePrice>
+              <Xona>1 xona</Xona>
+              <Price>
+                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+              </Price>
+            </HousePrice>
+            <HousePrice>
+              <Xona>1 xona</Xona>
+              <Price>
+                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+              </Price>
+            </HousePrice>
+            <HousePrice>
+              <Xona>1 xona</Xona>
+              <Price>
+                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+              </Price>
+            </HousePrice>
+            <HousePrice>
+              <Xona>1 xona</Xona>
+              <Price>
+                65.45 m<sup>2</sup> ....... 200 000 000 so'm
+              </Price>
+            </HousePrice>
+          </Naxlari>
         </Content>
         <Line></Line>
         <CardFooter>

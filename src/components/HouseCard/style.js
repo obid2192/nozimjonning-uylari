@@ -74,6 +74,9 @@ export const HouseAddress = styled.div`
   color: gray;
   font-size: 13px;
   margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  overflow: hidden;
 `;
 export const Bank = styled.div`
   display: flex;
@@ -97,9 +100,12 @@ export const CardFooter = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+
   height: 20px;
   margin-top: 10px;
+`;
+export const Naxlari = styled.div`
+  height: 90px;
 `;
 export const FooterText = styled.div``;
 export const FooterButton = styled.button`
@@ -112,22 +118,21 @@ export const FooterButton = styled.button`
   background-color: crimson;
 `;
 export const ImgTop = styled.div`
-position: absolute;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-z-index: 9;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
 `;
 export const Icons = styled.div``;
 export const TopText = styled.div`
-color: black;
-padding: 5px 10px;
-background-color: white;
-border-radius: 15px;
-font-size: 13px;
-margin: 0 10px;
-
+  color: black;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 13px;
+  margin: 0 10px;
 `;
 
 Icons.Love = styled(love)`
