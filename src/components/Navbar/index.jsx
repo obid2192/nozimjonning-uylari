@@ -5,6 +5,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import {Footer} from "../Footer"
 
 export const Navbar = () => {
+  
   return (
     <div>
       <Container>
@@ -29,11 +30,11 @@ export const Navbar = () => {
           
           <NavLink to={"/addhouse"}>
             {" "}
-            <Menu>Uy Qo'shish</Menu>
+            <Menu className="nav">Uy Qo'shish</Menu>
           </NavLink>
           <NavLink to={"/login"}>
             {" "}
-            <Menu>Login</Menu>
+            <Menu className="nav">Login</Menu>
           </NavLink>
         </Kirish>
       </Container>

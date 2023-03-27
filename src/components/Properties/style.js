@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+export const Container = styled.div`
   /* display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -15,4 +15,15 @@ const Container = styled.div`
   margin-top: 50px;
 `;
 
-export { Container };
+export const ReadMore = styled.button`
+margin-top: 20px;
+width: 100%;
+height: 40px;
+font-size: 20px;
+border-radius: 5px;
+outline: none;
+color: white;
+letter-spacing: 2px;
+border: none;
+background-color: darkslategrey;
+`

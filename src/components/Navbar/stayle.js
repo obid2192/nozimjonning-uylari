@@ -3,7 +3,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: grey;
+  background-color: darkslategrey;
   max-width: 1440px;
   padding: 0 100px;
   height: 50px;
@@ -14,7 +14,7 @@ export const Logo = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  color: blue;
+  /* color: blue; */
   font-weight: 600;
  
 `;
@@ -27,4 +27,5 @@ export const Menu = styled.div`
   color: black;
   margin-left: 40px;
   text-decoration: none;
+  
 `;

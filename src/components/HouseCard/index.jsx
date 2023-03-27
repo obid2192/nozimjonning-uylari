@@ -1,4 +1,5 @@
 import CaruselImg from "./caruseImg";
+
 // import mertoLogo from '../../assets/logo/metrologo.png'
 // import merto from '../../assets/logo/Metro.png'
 import {
@@ -25,16 +26,10 @@ import {
   TopText,
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
-  // const {
-  //   salePrice,
-  //     houseDetails,
-  //   address,
-  //   city,
-  //   country,
-  //   description,
-  //   category,
+  const {
+    title
 
-  // } = data;
+  } = data;
 
   // const save = (event) => {
   //   event?.stopPropagation();
@@ -75,7 +70,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
             <MetroText>10 min 1.5 km</MetroText>
           </Metro>
           <HouseAddress>
-            Chilonzor tumani Farhod ko'chasi 8 dom 14 uy 2 padez
+           {title} 
           </HouseAddress>
           <HousePrice>
             <Xona>1 xona</Xona>
