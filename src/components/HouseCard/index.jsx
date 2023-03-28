@@ -49,7 +49,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
   // };
 
   return (
-    // <div style={{ display: "flex" }} onClick={onClick}>
+    <div style={{ display: "flex" }} onClick={onClick}>
     <Container gap={gap} className="container">
       <ImgTop>
         <TopText>Topshiriladi 2024 yil</TopText>
@@ -103,7 +103,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
         </CardFooter>
       </TextCard>
     </Container>
-    // </div>
+    </div>
   );
 };
 

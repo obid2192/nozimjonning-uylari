@@ -1,9 +1,9 @@
 import React from 'react'
-import img from '../../assets/img/house.jpg'
+import img from '../../assets/img/house2.png'
 
 import { Container, FilterBox, FilterTitle, Img, Input, Select } from './style'
 
-export const Felter = () => {
+export const Filter = () => {
   return (
     <Container>
       <Img src={img} />
@@ -43,3 +43,4 @@ export const Felter = () => {
     </Container>
   )
 }
+export default Filter;

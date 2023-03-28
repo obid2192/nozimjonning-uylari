@@ -1,13 +1,13 @@
 import React from 'react'
-import { Felter } from '../Filter';
+import { Filter } from '../Filter';
 import Properties from '../Properties';
 import {Container } from "./style";
 
-export const Home1  = () => {
+export const HomePage  = () => {
   return (
     <>
     <Container>
-      <Felter />
+      <Filter />
       <Properties />
     </Container>
     </>

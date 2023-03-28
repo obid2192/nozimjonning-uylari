@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from "react";
 import { Container, ReadMore } from "./style";
 import HouseCard from "../HouseCard";
-// import { useLocation, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import useRequest from "../../hooks/useRequest";
 
 export const Properties = () => {
   const [item, setItem] = useState([])
   const [viseblit, setVisiblet] = useState(9)
-
+  // const navigate = Navigate()
+  const { REACT_APP_BASE_URL: url } = process.env;
   useEffect (() => {
-    fetch('https://jsonplaceholder.typicode.com/comments')
+    fetch(`${url}`)
     .then(response => response.json())
     .then(json => setItem(json))
   }, [])
@@ -17,16 +19,18 @@ export const Properties = () => {
   // const navigate = useNavigate();
   // const request = useRequest();
 
-  // useEffect(() => {
-  //   request({ url: `/houses/list${search}` }).then((res) =>
-  //     setData(res?.data || [])
-  //   );
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [search]);
+//   useEffect(() => {
+//     request({ url: `/houses/list${search}` }).then((res) =>
+//       setData(res?.data || [])
+//     );
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//   }, [search]);
 
-  // const onSelect = (id) => {
-  //   navigate(`/properties/${id}`);
-  // };
+  const onClick = (id) => {
+    // navigate(`/properties/${id}`);
+    // alert(`Cardning Id raqami ${id}`)
+    // console.log(`Cardning Id raqami ${id}`);
+  };
 const showMoreItem = () => {
   setVisiblet((prevValue) => prevValue + 9 )
 }
@@ -36,18 +40,17 @@ const showMoreItem = () => {
         Yangi qurulayotgan uylar
       </div>
       <Container>
-        {item.slice(0, viseblit).map((value) => {
-          
+        {item.slice(0, viseblit).map((value) => {          
           return (
             <HouseCard
-              // onClick={() => onSelect(value.id)}
+              onClick={onClick(value.id)}
               key={value.id}
               data={value}
             />
           );
         })}
       </Container>
-      <ReadMore onClick={showMoreItem}>Read More</ReadMore>
+      <ReadMore onClick={showMoreItem}>Yana ko'rish</ReadMore>
     </React.Fragment>
   );
 };

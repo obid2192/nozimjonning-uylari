@@ -1,31 +1,23 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Home1 } from "./components/Home1";
-import { Home2 } from "./components/Home2";
-import { Home3 } from "./components/Home3";
-import { Login } from "./components/LogIn";
-import { AddHouse } from "./components/AddHouse";
 
-function Root() {
-  const token = JSON.parse(localStorage.getItem("token"));
-  console.log(token);
+import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { navbar } from "../src/utils/navbar";
+import Navbar from "../src/components/Navbar";
+
+export const Root = () => {
   return (
-    <div>
+    <>
       <Routes>
         <Route element={<Navbar />}>
-          <Route exact path="/" element={<Home1 />}  />
-          <Route path="/home2" element={<Home2 />} />
-          <Route path="/home3" element={<Home3 />} />
-          <Route
-            path="/addhouse"
-            element={token ? <AddHouse /> : <Navigate to={"/login"} />}
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<p>Bunaqa manzil yo'q!</p>} />
+          {navbar.map(({ path, element, id }) => {
+            return <Route key={id} path={path} element={element} />;
+          })}
         </Route>
+        <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+        <Route path="/" element={<Navigate to={"/home"} />} />
       </Routes>
-    </div>
+    </>
   );
-}
+};
 
 export default Root;

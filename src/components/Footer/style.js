@@ -5,8 +5,9 @@ import { ReactComponent as cardHouse } from '../../assets/icons/cardHouse.svg';
 import { ReactComponent as cardMaps } from '../../assets/icons/cardMaps.svg';
 
 const Container = styled.div`
-  height: 417px;
-  background: slategrey;
+  height: 400px;
+  background: var(--colorPrimary);
+
 
   display: flex;
   position: relative;
