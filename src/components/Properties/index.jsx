@@ -9,12 +9,12 @@ export const Properties = () => {
   const [item, setItem] = useState([])
   const [viseblit, setVisiblet] = useState(9)
   // const navigate = Navigate()
-  const API = process.env.REACT_APP_BASE_URL
+  const { REACT_APP_BASE_URL: url } = process.env;
   useEffect (() => {
-    fetch({API})
+    fetch(`${url}`)
     .then(response => response.json())
     .then(json => setItem(json))
-  },[API])
+  }, [url])
   // const { search } = useLocation();
   // const navigate = useNavigate();
   // const request = useRequest();
