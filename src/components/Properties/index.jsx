@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { Container, ReadMore } from "./style";
 import HouseCard from "../HouseCard";
-import { Navigate } from "react-router-dom";
-import { useLocation, useNavigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
+// import { useLocation, useNavigate } from "react-router-dom";
 // import useRequest from "../../hooks/useRequest";
 
 export const Properties = () => {
@@ -14,7 +14,7 @@ export const Properties = () => {
     fetch(`${url}`)
     .then(response => response.json())
     .then(json => setItem(json))
-  }, [])
+  },[])
   // const { search } = useLocation();
   // const navigate = useNavigate();
   // const request = useRequest();
@@ -26,11 +26,11 @@ export const Properties = () => {
 //     // eslint-disable-next-line react-hooks/exhaustive-deps
 //   }, [search]);
 
-  const onClick = (id) => {
+  // const onClick = (id) => {
     // navigate(`/properties/${id}`);
     // alert(`Cardning Id raqami ${id}`)
     // console.log(`Cardning Id raqami ${id}`);
-  };
+  // };
 const showMoreItem = () => {
   setVisiblet((prevValue) => prevValue + 9 )
 }
@@ -43,7 +43,7 @@ const showMoreItem = () => {
         {item.slice(0, viseblit).map((value) => {          
           return (
             <HouseCard
-              onClick={onClick(value.id)}
+              // onClick={onClick(value.id)}
               key={value.id}
               data={value}
             />
