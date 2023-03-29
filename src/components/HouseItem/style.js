@@ -7,6 +7,10 @@ justify-content: space-between;
 margin-top: 50px;
 padding: 0 100px;
 flex-wrap: wrap;
+@media (max-width: 600px) {
+padding: 0 10px;
+    
+  }
 
 `
 

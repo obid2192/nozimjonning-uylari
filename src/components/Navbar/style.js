@@ -26,6 +26,9 @@ const Wrapper = styled.div`
 
   width: 100%;
   max-width: 1440px;
+  @media (max-width: 600px) {
+    padding: 0 10px;
+  }
 `;
 
 const Section = styled.div`
