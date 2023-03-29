@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 
 import { Button } from "../Generic/Button";
-import { Container, Link, Logo, Main, Menu, Section, Wrapper } from "./style";
+import { Container, Link, Logo, Main, Menu, Section1,Section2, Section3,  Wrapper } from "./style";
 import Footer from "../Footer";
 import { Dropdown } from "antd";
 
@@ -43,10 +43,10 @@ export const Home = () => {
     <Container>
       <Main>
         <Wrapper>
-          <Section onClick={() => navigate("/home")} logo>
+          <Section1 onClick={() => navigate("/home")} logo>
             <Logo /> <h3 style={{ color: "white" }}>Uylar</h3>
-          </Section>
-          <Section>
+          </Section1>
+          <Section2>
             {navbar.map(({ title, path, hidden }, index) => {
               return (
                 !hidden && (
@@ -60,8 +60,8 @@ export const Home = () => {
                 )
               );
             })}
-          </Section>
-          <Section>
+          </Section2>
+          <Section3>
             {token ? (
               <Dropdown
                 overlay={menu}
@@ -78,7 +78,7 @@ export const Home = () => {
                 Sign In
               </Button>
             )}
-          </Section>
+          </Section3>
         </Wrapper>
       </Main>
       {/* <Filter /> */}

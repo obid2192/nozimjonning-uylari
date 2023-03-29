@@ -6,6 +6,7 @@ import {
   CardTitle,
   Container,
   Img,
+  Img1,
   HouseAddress,
   Metro,
   Header,
@@ -51,6 +52,9 @@ export const HouseItem = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
             dolorem iste ea soluta
           </HouseAddress>
+          <Img1>
+          <CaruselTmg />
+        </Img1>
           <TextHeader>Kelishilgan</TextHeader>
           <Content>
             <HouseText>

@@ -13,6 +13,10 @@ export const Container = styled.div`
   width: 100%;
   margin: auto;
   margin-top: 50px;
+  @media (max-width: 600px) {
+    margin-top: 10px;  
+    padding: 0 10px ;  
+  }
 `;
 
 export const ReadMore = styled.button`
@@ -26,4 +30,9 @@ color: white;
 letter-spacing: 2px;
 border: none;
 background-color: darkslategrey;
+@media (max-width: 600px) {
+      font-size: 15px;
+  
+    
+  }
 `

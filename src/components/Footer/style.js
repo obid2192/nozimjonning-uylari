@@ -18,6 +18,13 @@ const Container = styled.div`
   width: 100%;
   margin-top: 96px;
   padding: 48px 0;
+  @media (max-width: 600px) {
+    padding: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    height: auto;
+  }
 `;
 
 const Content = styled.div`

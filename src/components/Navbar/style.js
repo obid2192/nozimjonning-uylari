@@ -17,28 +17,52 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   color: #ffff;
   padding: var(--padding);
   height: 64px;
-
   font-size: 16px;
-
   width: 100%;
   max-width: 1440px;
   @media (max-width: 600px) {
-    padding: 0 10px;
+    padding: 10px;
   }
 `;
 
-const Section = styled.div`
+const Section1 = styled.div`
   display: flex;
   align-items: center;
   cursor: ${({ logo }) => logo && "pointer"};
-
   .active {
     color: #b8ff06;
+  } 
+  @media (max-width: 600px) {
+   
   }
+
+`;
+const Section2 = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: ${({ logo }) => logo && "pointer"};
+  .active {
+    color: #b8ff06;
+  } 
+  @media (max-width: 600px) {
+   display: none;
+  }
+
+`;
+const Section3 = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: ${({ logo }) => logo && "pointer"};
+  .active {
+    color: #b8ff06;
+  } 
+  @media (max-width: 600px) {
+   display: none;
+  }
+
 `;
 
 const Logo = styled(logoImg)`
@@ -65,6 +89,9 @@ const Menu = styled.div`
   border-radius: 5px;
   box-shadow: 0px 20px 38px rgba(0, 0, 0, 0.06),
     0px 7px 46px rgba(0, 0, 0, 0.06), 0px 8px 15px rgba(0, 0, 0, 0.06);
+    @media (max-width: 600px) {
+   display: none;
+  }
 `;
 
 Menu.Item = styled.div`
@@ -75,6 +102,9 @@ Menu.Item = styled.div`
   line-height: 20px;
   cursor: pointer;
   color: #000000;
+  @media (max-width: 600px) {
+   display: none;
+  }
 `;
 
-export { Container, Menu, Wrapper, Section, Logo, Link, Main };
+export { Container, Menu, Wrapper, Section1, Section2, Section3, Logo, Link, Main };
