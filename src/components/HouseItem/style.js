@@ -17,18 +17,68 @@ background-color: green;
 `
 export const CardTitle = styled.div`
 display: flex;
-justify-content: center;
-align-items: center;
+flex-direction: column;
+
 padding: 15px;
 width: 370px;
 height: 520px;
 background-color: darkslategray;
 `
-// export const Container = styled.div``
-// export const Container = styled.div``
-// export const Container = styled.div``
-// export const Container = styled.div``
-// export const Container = styled.div``
+export const Header = styled.div`
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: slategray;
+`;
+
+export const Metro = styled.div`
+  display: flex;
+  align-items: center;
+`;
+export const MetroIcon = styled.div`
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+`;
+export const MetroTitle = styled.div`
+  color: red;
+  margin: 0 15px;
+`;
+export const MetroText = styled.div`
+  font-size: 13px;
+  color: gray;
+`;
+export const HouseAddress = styled.div`
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 5px;
+  
+`;
+export const Content = styled.div`
+width: 100%;
+height: 300px;
+`
+export const HouseText = styled.div`
+display: flex;
+align-items: center;
+`
+export const TextRight = styled.div`
+color:  black;
+font-weight: 600;
+width: 180px;
+margin: 2px 0;
+`
+export const TextLeft = styled.div`
+font-size: 14px;
+color: darkorange;
+`
+export const TextHeader = styled.div`
+color: darkgray;
+font-weight: 600;
+font-size: 25px;
+margin: 10px 0;
+`
 // export const Container = styled.div``
 // export const Container = styled.div``
 // export const Container = styled.div``
