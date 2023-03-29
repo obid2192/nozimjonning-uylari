@@ -46,7 +46,7 @@ export const navbar = [
       </React.Suspense>
     ),
     title: "Single House",
-    path: "/properties/:id",
+    path: "/houseitem/:id",
     private: false,
     hidden: true,
   },
