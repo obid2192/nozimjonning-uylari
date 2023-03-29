@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import CaruselTmg from "./caruseImg";
 import { useParams } from "react-router-dom";
 import { CardTitle, Container, Img } from "./style";
@@ -11,7 +11,7 @@ export const HouseItem = () => {
 
   // useEffect(() => {
   //   // request({ url: `/houses/list/${params?.id}` }).then((res) =>
-  //   //   setData(res?.data || [])
+  //   //   setData (res?.data || [])
   //   // );
   //   fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
   //     .then((res) => res.json())
