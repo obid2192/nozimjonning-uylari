@@ -1,92 +1,80 @@
-import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import "./navbar.css";
 import { navbar } from "../../utils/navbar";
+import { Outlet, useNavigate, NavLink } from "react-router-dom";
+import { Button } from "../Generic";
 
-import { Button } from "../Generic/Button";
-import { Container, Link, Logo, Main, Menu, Section1,Section2, Section3,  Wrapper } from "./style";
-import Footer from "../Footer";
-import { Dropdown } from "antd";
-
-export const Home = () => {
-  let token = localStorage.getItem("token");
+const Navbar = () => {
+ 
+  const [collapse, setCollapse] = useState("nav__menu");
+  const [toggleIcon, setToggleIcon] = useState("toggler__icon");
   const navigate = useNavigate();
 
-  const onClick = () => {
-    navigate("/signin");
+
+ const Yopiq = () => {
+  setCollapse('nav__menu')
+  setToggleIcon("toggler__icon");
+ }
+  const onToggle = () => {
+    collapse === "nav__menu"
+      ? setCollapse("nav__menu nav__collapse")
+      : setCollapse("nav__menu");
+
+    toggleIcon === "toggler__icon"
+      ? setToggleIcon("toggler__icon toggle")
+      : setToggleIcon("toggler__icon");
   };
-  const onClickProfile = ({
-    target: {
-      dataset: { name },
-    },
-  }) => {
-    if (name === "logout") {
-      localStorage.removeItem("token");
-      navigate(`/home`);
-    } else {
-      navigate(`${name}`);
-    }
-  };
-  const menu = (
-    <Menu>
-      <Menu.Item data-name="myprofile" onClick={onClickProfile}>
-        My profile
-      </Menu.Item>
-      <Menu.Item data-name="favourite" onClick={onClickProfile}>
-        Favourites
-      </Menu.Item>
-      <Menu.Item data-name="logout" onClick={onClickProfile}>
-        Log out
-      </Menu.Item>
-    </Menu>
-  );
+
   return (
-    <Container>
-      <Main>
-        <Wrapper>
-          <Section1 onClick={() => navigate("/home")} logo>
-            <Logo /> <h3 style={{ color: "white" }}>Uylar</h3>
-          </Section1>
-          <Section2>
+    <div className="nav__wrapper">
+      <div className="con">
+        <nav className="nav">
+          <a href="#" className="nav__brand" onClick={() => navigate("/home")}>
+            Logo
+          </a>
+          <ul className={collapse.toString()}>
             {navbar.map(({ title, path, hidden }, index) => {
               return (
                 !hidden && (
-                  <Link
+                  <NavLink onClick={Yopiq}
                     className={({ isActive }) => isActive && "active"}
                     key={index}
                     to={path}
                   >
                     {title}
-                  </Link>
+                  </NavLink>
                 )
               );
             })}
-          </Section2>
-          <Section3>
-            {token ? (
-              <Dropdown
-                overlay={menu}
-                placement="topRight"
-                arrow={{ pointAtCenter: true }}
-                trigger="click"
-              >
-                <Button type="dark">
-                  <div>Profile</div>
-                </Button>
-              </Dropdown>
-            ) : (
-              <Button onClick={onClick} type="dark">
-                Sign In
-              </Button>
-            )}
-          </Section3>
-        </Wrapper>
-      </Main>
-      {/* <Filter /> */}
-      
+            <div className="navBtn">
+             <Button type="dark" onClick={Yopiq}>
+            Mulk qo'shish{" "}
+            </Button>
+            <Button onClick={Yopiq}>
+            Sign In {" "}
+            </Button>
+            </div>
+          </ul>
+          <div className="loginCard">
+            <Button type="dark">
+            Mulk qo'shish{" "}
+            </Button>
+            <Button>
+            Sign In {" "}
+            </Button>
+          </div>
+          <div className={toggleIcon} onClick={onToggle}>
+            <div className="line__1"></div>
+            <div className="line__2"></div>
+            <div className="line__3"></div>
+          </div>
+        </nav>
+      </div>
       <Outlet />
-      <Footer />
-    </Container>
+    </div>
   );
 };
 
-export default Home;
+export default Navbar;
+

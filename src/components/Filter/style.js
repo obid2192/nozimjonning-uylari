@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 350px;
-  background-color: blue;
   margin: 50px 0;
   @media (max-width: 600px) {
     height: 200px;
@@ -24,7 +23,7 @@ export const FilterBox = styled.div`
   width: 80%;
   padding: 20px;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   @media (max-width: 600px) {
     
     margin: 10px;
@@ -37,7 +36,7 @@ export const FilterTitle = styled.div`
   color: black;
   font-family: sans-serif;
   position: absolute;
-  z-index: 3;
+  /* z-index: 1; */
   font-size: 40px;
   font-weight: 600;
   margin-top: 50px;

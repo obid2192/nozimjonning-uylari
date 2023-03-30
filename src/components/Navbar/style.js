@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   @media (max-width: 600px) {
-    padding: 10px;
+    padding: 0 20px;
   }
 `;
 
@@ -34,11 +34,9 @@ const Section1 = styled.div`
   cursor: ${({ logo }) => logo && "pointer"};
   .active {
     color: #b8ff06;
-  } 
-  @media (max-width: 600px) {
-   
   }
-
+  @media (max-width: 600px) {
+  }
 `;
 const Section2 = styled.div`
   display: flex;
@@ -46,11 +44,10 @@ const Section2 = styled.div`
   cursor: ${({ logo }) => logo && "pointer"};
   .active {
     color: #b8ff06;
-  } 
-  @media (max-width: 600px) {
-   display: none;
   }
-
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 const Section3 = styled.div`
   display: flex;
@@ -58,11 +55,10 @@ const Section3 = styled.div`
   cursor: ${({ logo }) => logo && "pointer"};
   .active {
     color: #b8ff06;
-  } 
-  @media (max-width: 600px) {
-   display: none;
   }
-
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Logo = styled(logoImg)`
@@ -89,8 +85,8 @@ const Menu = styled.div`
   border-radius: 5px;
   box-shadow: 0px 20px 38px rgba(0, 0, 0, 0.06),
     0px 7px 46px rgba(0, 0, 0, 0.06), 0px 8px 15px rgba(0, 0, 0, 0.06);
-    @media (max-width: 600px) {
-   display: none;
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -103,8 +99,25 @@ Menu.Item = styled.div`
   cursor: pointer;
   color: #000000;
   @media (max-width: 600px) {
-   display: none;
+    display: none;
   }
 `;
 
-export { Container, Menu, Wrapper, Section1, Section2, Section3, Logo, Link, Main };
+export const FaBarsIcon = styled.div`
+  display: none;
+  font-size: 22px;
+  @media (max-width: 600px) {
+    display: block;
+  }
+`;
+export {
+  Container,
+  Menu,
+  Wrapper,
+  Section1,
+  Section2,
+  Section3,
+  Logo,
+  Link,
+  Main,
+};

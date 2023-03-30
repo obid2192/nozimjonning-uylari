@@ -1,7 +1,7 @@
 import React from 'react'
 import img from '../../assets/img/house2.png'
-
-import { Container, FilterBox, FilterTitle, Img, Input, Select } from './style'
+import Input from '../Generic/Input'
+import { Container, FilterBox, FilterTitle, Img, Select } from './style'
 
 export const Filter = () => {
   return (
@@ -36,9 +36,9 @@ export const Filter = () => {
           <option value="">500 000 000 so'm</option>
           <option value="">1 000 000 000 so'm</option>          
         </Select>
-        <Input type='text'  placeholder="...so'mma dan"/>
-        <Input type='text'  placeholder="...so'mma gacha"/>
         
+        <Input  placeholder="Name" width="200px"/>
+        <Input  placeholder="Name" width="200px"/>
       </FilterBox>
     </Container>
   )

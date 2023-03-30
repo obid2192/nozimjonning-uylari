@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Container, ReadMore } from "./style";
 import HouseCard from "../HouseCard";
-// import { Navigate } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
-// import useRequest from "../../hooks/useRequest";
 
 export const Properties = () => {
   const [item, setItem] = useState([])
