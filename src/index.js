@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import RootContext from "./context";
+import { StyledEngineProvider } from '@mui/material/styles';
+
 import "./index.css";
 import Root from "./Root";
 // import "antd/dist/antd.css";
@@ -18,7 +20,9 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <RootContext>
-          <Root />
+          <StyledEngineProvider injectFirst>
+            <Root />
+          </StyledEngineProvider>
         </RootContext>
       </BrowserRouter>
     </QueryClientProvider>

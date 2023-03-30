@@ -17,6 +17,7 @@ export const Container = styled.div`
 export const FilterBox = styled.div`
   display: flex;
   align-items: center;
+  background-color: grey;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 260px;
@@ -25,7 +26,6 @@ export const FilterBox = styled.div`
   position: relative;
   /* z-index: 2; */
   @media (max-width: 600px) {
-    
     margin: 10px;
   }
 `;
@@ -42,7 +42,7 @@ export const FilterTitle = styled.div`
   margin-top: 50px;
   @media (max-width: 600px) {
     font-size: 16px;
-    margin-top: 10px;    
+    margin-top: 10px;
   }
 `;
 export const Input = styled.input`
