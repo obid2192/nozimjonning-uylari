@@ -1,5 +1,3 @@
-// import React from 'react'
-// import Input from '../Generic/Input'
 import * as React from 'react';
 import { Container, FilterBox, FilterTitle, Img } from './style'
 import img from '../../assets/img/house2.png'
@@ -11,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
+import { Input } from '../Generic';
  
 export const Filter = () => {
   const ITEM_HEIGHT = 48;
@@ -107,7 +106,7 @@ const handleChangee = (event) => {
       </FormControl>
     </Box>
     <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+        <InputLabel id="demo-multiple-checkbox-label">Xona</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
@@ -125,6 +124,8 @@ const handleChangee = (event) => {
             </MenuItem>
           ))}
         </Select>
+        <Input />
+        <Input />
       </FormControl>
       </FilterBox>
     </Container>
