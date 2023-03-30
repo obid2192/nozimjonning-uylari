@@ -1,6 +1,6 @@
 // import React, { useEffect, useState } from "react";
 import CaruselTmg from "./caruseImg";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import Button from "../Generic/Button";
 import {
   CardTitle,
@@ -23,7 +23,7 @@ import {
 // const { REACT_APP_BASE_URL: url } = process.env;
 
 export const HouseItem = () => {
-  const params = useParams();
+  // const params = useParams();
   // console.log(params?.id);
 
   // useEffect(() => {
@@ -41,7 +41,7 @@ export const HouseItem = () => {
     <>
       <Container>
         <CardTitle>
-          <h1>Malumot raqami {params?.id}</h1>
+          {/* <h1>Malumot raqami {params?.id}</h1> */}
           <Header>O'zbegim</Header>
           <Metro>
             <MetroIcon>M</MetroIcon>

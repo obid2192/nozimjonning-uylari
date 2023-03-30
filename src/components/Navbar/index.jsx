@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Footer from '../Footer'
 import "./navbar.css";
 import { navbar } from "../../utils/navbar";
 import { Outlet, useNavigate, NavLink } from "react-router-dom";
@@ -72,6 +72,7 @@ const Navbar = () => {
         </nav>
       </div>
       <Outlet />
+      <Footer />
     </div>
   );
 };

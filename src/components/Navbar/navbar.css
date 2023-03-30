@@ -101,8 +101,6 @@ li {
     z-index: 99;
     transform: translateX(100%);
     transition: 0.5s ease;
-    display: flex;
-   
     justify-content: center;
   }
   .con {
