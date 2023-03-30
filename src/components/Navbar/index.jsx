@@ -30,9 +30,9 @@ const Navbar = () => {
     <div className="nav__wrapper">
       <div className="con">
         <nav className="nav">
-          <a href="#" className="nav__brand" onClick={() => navigate("/home")}>
+          <div className="nav__brand" onClick={() => navigate("/home")}>
             Logo
-          </a>
+          </div>
           <ul className={collapse.toString()}>
             {navbar.map(({ title, path, hidden }, index) => {
               return (
