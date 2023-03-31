@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Container, FilterBox, FilterTitle, Img } from './style'
 import img from '../../assets/img/house2.png'
+import Input from '@mui/material/Input';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
@@ -9,8 +10,8 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
-import { Input } from '../Generic';
- 
+// import { Input } from '../Generic';
+import './style.css'
 export const Filter = () => {
   const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -33,7 +34,7 @@ const names = [
 ];
 
   const [age, setAge] = React.useState('');
-
+  const ariaLabel = { 'aria-label': 'description' };
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -57,6 +58,8 @@ const handleChangee = (event) => {
         O'zbekiston bo'ylab uy elonlari
       </FilterTitle>
       <FilterBox>  
+      
+
       <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Uy turi</InputLabel>
@@ -73,6 +76,7 @@ const handleChangee = (event) => {
         </Select>
       </FormControl>
     </Box>
+    
       <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Sotib olish</InputLabel>
@@ -82,13 +86,14 @@ const handleChangee = (event) => {
           value={age}
           label="Age"
           onChange={handleChange}
-        >
+          >
           <MenuItem value={10}>Sotib olish</MenuItem>
-          <MenuItem value={20}>Kredetga</MenuItem>
           <MenuItem value={30}>Ijaraga</MenuItem>
         </Select>
       </FormControl>
     </Box>
+        
+
       <Box sx={{ minWidth: 200 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Bino turi</InputLabel>
@@ -105,7 +110,7 @@ const handleChangee = (event) => {
         </Select>
       </FormControl>
     </Box>
-    <FormControl sx={{ m: 1, width: 300 }}>
+    <FormControl sx={{ m: 1, width: 200 }}>
         <InputLabel id="demo-multiple-checkbox-label">Xona</InputLabel>
         <Select
           labelId="demo-multiple-checkbox-label"
@@ -124,9 +129,12 @@ const handleChangee = (event) => {
             </MenuItem>
           ))}
         </Select>
-        <Input />
-        <Input />
       </FormControl>
+ 
+      <Input placeholder="... dan" inputProps={ariaLabel} />
+      <Input placeholder="... gacha" inputProps={ariaLabel} />
+      
+        
       </FilterBox>
     </Container>
   )

@@ -9,7 +9,7 @@ export const Container = styled.div`
   height: 350px;
   margin: 50px 0;
   @media (max-width: 600px) {
-    height: 200px;
+    height: auto;
     border-radius: 0px;
     margin: 0;
   }
@@ -21,12 +21,12 @@ export const FilterBox = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 260px;
-  width: 80%;
+  width: 100%;
   padding: 20px;
   position: relative;
   /* z-index: 2; */
   @media (max-width: 600px) {
-    margin: 10px;
+    margin: 100px 10px 10px 10px;
   }
 `;
 export const Select = styled.select`
