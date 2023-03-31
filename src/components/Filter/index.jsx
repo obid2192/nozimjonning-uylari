@@ -106,7 +106,7 @@ const handleChangee = (event) => {
         >
           <MenuItem value={10}>Yangi binolarda</MenuItem>
           <MenuItem value={20}>Qayta sotish</MenuItem>
-          <MenuItem value={30}>Yangi bino va qayta sotish</MenuItem>
+          <MenuItem value={30}>Eski binolar</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -131,8 +131,8 @@ const handleChangee = (event) => {
         </Select>
       </FormControl>
  
-      <Input placeholder="... dan" inputProps={ariaLabel} />
-      <Input placeholder="... gacha" inputProps={ariaLabel} />
+      <Input placeholder="......dan so'm" inputProps={ariaLabel} />
+      <Input placeholder="......gacha so'm" inputProps={ariaLabel} />
       
         
       </FilterBox>

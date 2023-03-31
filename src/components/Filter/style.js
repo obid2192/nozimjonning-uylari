@@ -17,13 +17,13 @@ export const Container = styled.div`
 export const FilterBox = styled.div`
   display: flex;
   align-items: center;
-  background-color: grey;
+  background-color: ghostwhite;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 260px;
+  margin-top: 220px;
   width: 100%;
-  padding: 20px;
-  position: relative;
+  padding: 10px;
+  position: absolute;
   /* z-index: 2; */
   @media (max-width: 600px) {
     margin: 100px 10px 10px 10px;
