@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-// import { Footer } from "./Footer";
+import Footer from "../Footer";
 import "./NavBar.css";
 
 function NavBar() {
@@ -69,7 +69,7 @@ function NavBar() {
         </div>
       </nav>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

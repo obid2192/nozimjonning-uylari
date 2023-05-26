@@ -1,16 +1,8 @@
-// import { json } from 'react-router-dom';
 import React from 'react';
 import { Container, Content, Icon } from './style';
 
 export const Footer = () => {
 
-  // useEffect(()=>{
-  //   fetch("https://demos.smartio.uz/api/v1/employee/count")
-  //   .then((response) => response.json())
-  //   .then((json) => {
-  //     console.log(json);
-  //   });
-  // }, [])
   return (
     <Container>
       <Content>

@@ -6,7 +6,7 @@ import { ReactComponent as cardMaps } from '../../assets/icons/cardMaps.svg';
 
 const Container = styled.div`
   height: 400px;
-  background: var(--colorPrimary);
+  background-color: #1f5156;
 
 
   display: flex;
