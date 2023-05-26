@@ -42,15 +42,15 @@ const names = [
 // -------------------------------------
 const [personName, setPersonName] = React.useState([]);
 
-// const handleChangee = (event) => {
-//   const {
-//     target: { value },
-//   } = event;
-//   setPersonName(
-//     // On autofill we get a stringified value.
-//     typeof value === 'string' ? value.split(',') : value,
-//   );
-// };
+const handleChangee = (event) => {
+  const {
+    target: { value },
+  } = event;
+  setPersonName(
+    // On autofill we get a stringified value.
+    typeof value === 'string' ? value.split(',') : value,
+  );
+};
 
   return (
     <Container>
