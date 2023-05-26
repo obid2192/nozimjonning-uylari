@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../Footer";
-import "./NavBar.css";
+import "./style.css";
 
 function NavBar() {
   const [click, setClick] = useState(false);
