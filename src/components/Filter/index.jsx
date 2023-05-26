@@ -40,7 +40,7 @@ const names = [
     // console.log(event.target.value);
   };
 // -------------------------------------
-const [personName, setPersonName] = React.useState([]);
+const [personName, setPersonName] = React.useState([1]);
 
 const handleChangee = (event) => {
   const {
@@ -137,6 +137,7 @@ const handleChangee = (event) => {
       
         
       </FilterBox>
+      <button onClick={handleChangee}>Submit</button>
     </Container>
   )
 }
