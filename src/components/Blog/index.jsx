@@ -1,11 +1,10 @@
 import React from "react";
 import { Container } from "./style";
 
-export const Contact = () => {
+export const Blog = () => {
   return (
     <Container>
-    
-      <h1>Contact</h1>
+      <h1>Blog</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
         laboriosam incidunt fugit quaerat enim cumque ut illo quos, eum sequi
@@ -34,3 +33,4 @@ export const Contact = () => {
     </Container>
   );
 };
+export default Blog;

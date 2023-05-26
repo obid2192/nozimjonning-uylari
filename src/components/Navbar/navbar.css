@@ -1,130 +1,157 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar {
+  background-color: #1f5156;
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.con {
-  background: #5767aa;
-  max-width: 1440;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
   padding: 0 100px;
-}
-.loginCard {
-  display: flex;
-  width: 300px;
-  justify-content: space-between;
-}
-.navBtn {
-  display: none;
-}
-@media screen and (max-width: 960px) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  max-width: 1440px;
 }
 
-/* Navbar */
-
-.nav__wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav {
-  display: flex;
+.nav-logo {
+  color: #f5b921;
   align-items: center;
-  justify-content: space-between;
-  height: 10vh;
-}
-
-.nav__brand {
-  font-size: 30px;
-  font-weight: 700;
-  color: #ddd;
-}
-
-.nav__menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
-}
-.active {
-  color: chartreuse;
-}
-.nav__link {
-  color: #ddd;
-}
-
-.toggler__icon {
   cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-left: 3rem;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #ffdd40;
+}
+
+.nav-item .active {
+  color: #ffdd40;
+  /* border: 1px solid #ffdd40; */
+}
+
+.nav-icon {
+ margin-top: 12px;
   display: none;
 }
 
-.toggler__icon div {
-  width: 25px;
-  height: 2px;
-  background: #ddd;
-  margin: 5px 0px;
-  transition: 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-  .toggler__icon {
-    display: block;
+@media screen and (max-width: 960px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 0 80px;
   }
-  .nav__menu {
-    position: absolute;
-    background: #5767aa;
+  .nav-menu {
+    display: flex;
     flex-direction: column;
-    top: 10vh;
-    width: 50%;
-    height: 50vh;
-    right: 0;
-    z-index: 99;
-    transform: translateX(100%);
-    transition: 0.5s ease;
-    justify-content: center;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
   }
-  .con {
-    padding: 0 15px;
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
-  .loginCard {
-    display: none;
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+    
   }
-  .navBtn {
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
   }
 }
-.nav__collapse {
-  transform: translateX(0%);
-}
+@media screen and (max-width: 600px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav-logo {  
+    font-size: 1.5rem;
+  }
+  .nav-icon {
+   
+    font-size: 1.5rem;
 
-/* Toggle Icon Animation */
-.toggle .line__1 {
-  transform: translate(-5px, 7px) rotate(-45deg);
+  }
+ 
 }
-.toggle .line__2 {
-  opacity: 0;
-}
-.toggle .line__3 {
-  transform: translate(-5px, -7px) rotate(45deg);
-}
-

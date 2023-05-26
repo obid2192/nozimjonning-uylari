@@ -6,19 +6,19 @@ import MyProfile from "..//components/MyProfile";
 import AddNewHouse from "..//components/AddHouse";
 import { HomePage } from "..//components/HomePage";
 import { Contact } from "../components/Contact";
+import { Blog } from "../components/Blog";
+import { About } from "../components/About";
 import { HouseItem } from "../components/HouseItem";
 // const HomePage = React.lazy(() => import("..//components/HomePage"));
 // const Contact = React.lazy(() => import("..//components/Contact"));
 // const HoumeItem = React.lazy(() => import("..//components/HouseItem"));
-
-
 
 export const navbar = [
   {
     id: useId,
     element: (
       <React.Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>
-        <HomePage /> {" "}
+        <HomePage />{" "}
       </React.Suspense>
     ),
     title: "Home",
@@ -35,6 +35,30 @@ export const navbar = [
     ),
     title: "Ixtiyoriy nom",
     path: "/contact",
+    private: false,
+    hidden: false,
+  },
+  {
+    id: useId,
+    element: (
+      <React.Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>
+        <Blog />
+      </React.Suspense>
+    ),
+    title: "Blog",
+    path: "/blog",
+    private: false,
+    hidden: false,
+  },
+  {
+    id: useId,
+    element: (
+      <React.Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>
+        <About />
+      </React.Suspense>
+    ),
+    title: "About",
+    path: "/about",
     private: false,
     hidden: false,
   },

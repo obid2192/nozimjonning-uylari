@@ -37,19 +37,20 @@ const names = [
   const ariaLabel = { 'aria-label': 'description' };
   const handleChange = (event) => {
     setAge(event.target.value);
+    // console.log(event.target.value);
   };
 // -------------------------------------
 const [personName, setPersonName] = React.useState([]);
 
-const handleChangee = (event) => {
-  const {
-    target: { value },
-  } = event;
-  setPersonName(
-    // On autofill we get a stringified value.
-    typeof value === 'string' ? value.split(',') : value,
-  );
-};
+// const handleChangee = (event) => {
+//   const {
+//     target: { value },
+//   } = event;
+//   setPersonName(
+//     // On autofill we get a stringified value.
+//     typeof value === 'string' ? value.split(',') : value,
+//   );
+// };
 
   return (
     <Container>
@@ -70,9 +71,9 @@ const handleChangee = (event) => {
           label="Age"
           onChange={handleChange}
         >
-          <MenuItem value={10}>Kvartera</MenuItem>
-          <MenuItem value={20}>Kottej</MenuItem>
-          <MenuItem value={30}>Havli</MenuItem>
+          <MenuItem value="Kvartera">Kvartera</MenuItem>
+          <MenuItem value="Kottej">Kottej</MenuItem>
+          <MenuItem value="Havli">Havli</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -87,8 +88,8 @@ const handleChangee = (event) => {
           label="Age"
           onChange={handleChange}
           >
-          <MenuItem value={10}>Sotib olish</MenuItem>
-          <MenuItem value={30}>Ijaraga</MenuItem>
+          <MenuItem value="Sotib olish">Sotib olish</MenuItem>
+          <MenuItem value="Ijaraga">Ijaraga</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -104,9 +105,9 @@ const handleChangee = (event) => {
           label="Age"
           onChange={handleChange}
         >
-          <MenuItem value={10}>Yangi binolarda</MenuItem>
-          <MenuItem value={20}>Qayta sotish</MenuItem>
-          <MenuItem value={30}>Eski binolar</MenuItem>
+          <MenuItem value="Yangi binolarda">Yangi binolarda</MenuItem>
+          <MenuItem value="Qayta sotish">Qayta sotish</MenuItem>
+          <MenuItem value="Eski binolar">Eski binolar</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -117,7 +118,7 @@ const handleChangee = (event) => {
           id="demo-multiple-checkbox"
           multiple
           value={personName}
-          onChange={handleChangee}
+          onChange={handleChange}
           input={<OutlinedInput label="Tag" />}
           renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
@@ -131,8 +132,8 @@ const handleChangee = (event) => {
         </Select>
       </FormControl>
  
-      <Input placeholder="......dan so'm" inputProps={ariaLabel} />
-      <Input placeholder="......gacha so'm" inputProps={ariaLabel} />
+      <Input onChange={handleChange} placeholder="......dan so'm" inputProps={ariaLabel} />
+      <Input onChange={handleChange} placeholder="......gacha so'm" inputProps={ariaLabel} />
       
         
       </FilterBox>

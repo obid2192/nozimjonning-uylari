@@ -79,3 +79,11 @@ body {
 .slick-dots-bottom {
   width: inherit !important;
 }
+
+
+.pages {
+  color: #316685;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 10%;
+}

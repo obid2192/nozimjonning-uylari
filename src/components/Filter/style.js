@@ -15,6 +15,7 @@ export const Container = styled.div`
   }
 `;
 export const FilterBox = styled.div`
+margin: 0 10px;
   display: flex;
   align-items: center;
   background-color: ghostwhite;
@@ -27,6 +28,8 @@ export const FilterBox = styled.div`
   /* z-index: 2; */
   @media (max-width: 600px) {
     margin: 100px 10px 10px 10px;
+  position: relative;
+
   }
 `;
 export const Select = styled.select`

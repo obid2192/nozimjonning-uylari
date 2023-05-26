@@ -1,17 +1,16 @@
-import React from 'react'
-import { Filter } from '../Filter';
-import Properties from '../Properties';
+import React from "react";
+import { Filter } from "../Filter";
+import Properties from "../Properties";
 
-import {Container } from "./style";
+import { Container } from "./style";
 
-export const HomePage  = () => {
+export const HomePage = () => {
   return (
     <>
-    <Container>
-    
-            <Filter />
-      <Properties />
-    </Container>
+      <Container>
+        <Filter /> 
+        <Properties />
+      </Container>
     </>
-  )
-}
+  );
+};
