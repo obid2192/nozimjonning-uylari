@@ -50,7 +50,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
 
   return (
     <div style={{ display: "flex" }} >
-    <Container gap={gap} className="container">
+    <Container gap={gap} onClick={onClick} className="container">
       <ImgTop>
         <TopText>Topshiriladi 2024 yil</TopText>
 
@@ -59,7 +59,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
       <Img>
         <CaruselImg />
       </Img>
-      <TextCard onClick={onClick}>
+      <TextCard >
         <Content>
           <Bank>Ipateka 16%</Bank>
           <Header>O'zbegim</Header>
@@ -88,12 +88,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
                 71.95 m<sup>2</sup> ....... 700 000 000 so'm
               </Price>
             </HousePrice>
-            <HousePrice>
-              <Xona>4 xona</Xona>
-              <Price>
-                154.67 m<sup>2</sup> ....... 1 000 000 000 so'm
-              </Price>
-            </HousePrice>
+           
           </Naxlari>
         </Content>
         <Line></Line>

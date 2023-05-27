@@ -44,7 +44,6 @@ export const Filter = () => {
       typeof value === "string" ? value.split(",") : value
     );
   };
-  console.log(personName);
   return (
     <>
       <Container>
