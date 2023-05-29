@@ -12,6 +12,8 @@ import Select from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
 // import { Input } from '../Generic';
 import "./style.css";
+import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 export const Filter = () => {
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
@@ -24,17 +26,23 @@ export const Filter = () => {
     },
   };
 
-  const names = ["1 xona", "2 xona", "3 xona", "4 xona", "5 xona", "6 xona"];
-
-  const [age, setAge] = React.useState("");
-  const ariaLabel = { "aria-label": "description" };
-  const handleChange = (event) => {
-    setAge(event.target.value);
-    // console.log(event.target.value);
+  const [data, setData] = useState();
+ const [search, setSearch] = useSearchParams();
+ 
+ const names = ["1 xona", "2 xona", "3 xona", "4 xona", "5 xona", "6 xona"];
+ 
+ const [age, setAge] = React.useState("");
+ const ariaLabel = { "aria-label": "description" };
+ const handleChange = (event) => {
+   setAge(event.target.value);
+   setData({ ...data, [event.target.name]: event.target.value });
+   if (event.target.value !== '') {
+     setSearch(data)
+    
+   }
   };
   // -------------------------------------
   const [personName, setPersonName] = React.useState([]);
-
   const handleChangee = (event) => {
     const {
       target: { value },
@@ -59,6 +67,7 @@ export const Filter = () => {
                 value={age}
                 label="Age"
                 onChange={handleChange}
+                name="uyturi"
               >
                 <MenuItem value="Kvartera">Kvartera</MenuItem>
                 <MenuItem value="Kottej">Kottej</MenuItem>
@@ -75,6 +84,7 @@ export const Filter = () => {
                 id="demo-simple-select"
                 value={age}
                 label="Age"
+                name="sotibolish"
                 onChange={handleChange}
               >
                 <MenuItem value="Sotib olish">Sotib olish</MenuItem>
@@ -90,12 +100,13 @@ export const Filter = () => {
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={age}
+                name="uyholati"
                 label="Age"
                 onChange={handleChange}
               >
-                <MenuItem value="Yangi binolarda">Yangi binolarda</MenuItem>
-                <MenuItem value="Qayta sotish">Qayta sotish</MenuItem>
-                <MenuItem value="Eski binolar">Eski binolar</MenuItem>
+                <MenuItem value="Yangibinolarda">Yangi binolarda</MenuItem>
+                <MenuItem value="Qaytasotish">Qayta sotish</MenuItem>
+                <MenuItem value="Eskibinolar">Eski binolar</MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -107,6 +118,7 @@ export const Filter = () => {
               multiple
               value={personName}
               onChange={handleChange}
+              name="xonalarsoni"
               input={<OutlinedInput label="Tag" />}
               renderValue={(selected) => selected.join(", ")}
               MenuProps={MenuProps}
@@ -124,16 +136,28 @@ export const Filter = () => {
             onChange={handleChange}
             placeholder="......dan so'm"
             inputProps={ariaLabel}
+            name="dan"
           />
           <Input
             onChange={handleChange}
             placeholder="......gacha so'm"
+            name="gacha"
             inputProps={ariaLabel}
           />
-        <button onClick={handleChangee}>Submit</button>
+          <button onClick={handleChangee}>Submit</button>
         </FilterBox>
       </Container>
     </>
   );
 };
 export default Filter;
+
+
+// import React from 'react'
+
+// export const Filter = () => {
+//   return (
+//     <div>Filter</div>
+//   )
+// }
+// export default Filter;

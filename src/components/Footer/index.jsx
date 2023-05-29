@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Content, Icon } from './style';
+import React from "react";
+import { Container, Content, Icon } from "./style";
 
 export const Footer = () => {
 
@@ -11,16 +11,17 @@ export const Footer = () => {
           <Icon.Email /> Manzil...
         </Content.Item>
         <Content.Item>
-          {' '}
-          <Icon.Phone />99 7182192
+          {" "}
+          <Icon.Phone />
+          99 7182192
         </Content.Item>
         <Content.Item>
-          <Icon.Email />uylar@gmail.com
+          <Icon.Email />
+          uylar@gmail.com
         </Content.Item>
       </Content>
       <Content>
         <Content.Title>Viloyatlar</Content.Title>
-
         <Content.Item>Toshkent</Content.Item>
         <Content.Item> Sirdaryo</Content.Item>
         <Content.Item> Jizzax</Content.Item>
@@ -31,7 +32,6 @@ export const Footer = () => {
       </Content>
       <Content>
         <Content.Title>Viloyatlar</Content.Title>
-
         <Content.Item>Andijon </Content.Item>
         <Content.Item>Namangan </Content.Item>
         <Content.Item>Farg'ona </Content.Item>
@@ -41,7 +41,6 @@ export const Footer = () => {
       </Content>
       <Content>
         <Content.Title>Contacts</Content.Title>
-
         <Content.Item>Uylar...</Content.Item>
         <Content.Item>Uylar...</Content.Item>
         <Content.Item>Uylar...</Content.Item>

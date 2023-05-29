@@ -19,6 +19,7 @@ import "./style.css";
 import { Pagination, Navigation, EffectCube } from "swiper";
 
 export default function CaruselTmg() {
+
   const img = [uy1, uy2, uy3, uy4, uy5, uy6];
   return (
     <>

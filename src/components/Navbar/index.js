@@ -12,7 +12,7 @@ function NavBar() {
       <nav className="navbar">
         <div className="nav-container">
           <div>
-            <Link exact to="/" className="nav-logo">
+            <Link to="/" className="nav-logo">
               <i className="fas fa-home"></i>
             </Link>
           </div>
@@ -20,7 +20,7 @@ function NavBar() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link
-                exact
+                
                 to="/home"
                 activeClassName="active"
                 className="nav-links"
