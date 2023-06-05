@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import { Container, ReadMore } from "./style";
 import HouseCard from "../HouseCard";
-import { useNavigate} from "react-router-dom";
+import { useNavigate, useLocation} from "react-router-dom";
 
 export const Properties = () => {
   const [viseblit, setVisiblet] = useState(9)
   const navigate = useNavigate();
-
+  const { search } = useLocation();
+console.log(search);
   // const { REACT_APP_BASE_URL: url } = process.env;
   // useEffect (() => {
   //   fetch(`${url}`)
@@ -16,7 +17,7 @@ export const Properties = () => {
   const [data, setData] = useState([])
   const YOUR_ACCESS_KEY = "lhn5Z3awPZLfxukFk0iuY4So1V_kE33hSIaFJ4mquZY";
   useEffect(() => {
-    fetch(`https://api.unsplash.com/search/photos?page=2&query=house&client_id=${YOUR_ACCESS_KEY}`)
+    fetch(`https://api.unsplash.com/search/photos?page=2&query=house&client_id=${YOUR_ACCESS_KEY}&count=1`)
       .then((res) => res.json())
       .then((value) => setData(value.results));
   }, []);
