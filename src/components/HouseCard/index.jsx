@@ -27,26 +27,9 @@ import {
   Naxlari,
 } from "./style";
 export const HouseCard = ({ data = {}, gap, onClick }) => {
-  const { name, email } = data;
+  const { user } = data;
 
-  // const save = (event) => {
-  //   event?.stopPropagation();
-  //   fetch(
-  //     `https://houzing-app.herokuapp.com/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
-  //     {
-  //       method: "PUT",
-  //       headers: {
-  //         Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //       },
-  //     }
-  //   )
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       if (favorite) res?.success && message.warning("Successfully disliked");
-  //       else res?.success && message.info("Successfully liked");
-  //       state.refetch && state.refetch();
-  //     });
-  // };
+console.log("House Card");
 
   return (
     <div style={{ display: "flex" }} >
@@ -57,18 +40,18 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
         <Icons.Love favorite={"favorite"} />
       </ImgTop>
       <Img>
-        <CaruselImg />
+        <CaruselImg photo={data} />
       </Img>
       <TextCard onClick={onClick} >
         <Content>
-          <Bank>Ipateka 16%</Bank>
-          <Header>O'zbegim</Header>
+          <Bank>Ipateka {data.user.total_likes}%</Bank>
+          <Header>{data.user.first_name}</Header>
           <Metro>
             <MetroIcon>M</MetroIcon>
             <MetroTitle>Chilonzor</MetroTitle>
             <MetroText>10 min 1.5 km</MetroText>
           </Metro>
-          <HouseAddress>{name}</HouseAddress>
+          <HouseAddress>{user.bio}</HouseAddress>
           <Naxlari>
             <HousePrice>
               <Xona>1 xona</Xona>
@@ -93,8 +76,8 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
         </Content>
         <Line></Line>
         <CardFooter>
-          <FooterText>{email}</FooterText>
-          <FooterButton>+99899182192 </FooterButton>
+          <FooterText>{user.name}</FooterText>
+          <FooterButton color={data.color}>+99899182192 </FooterButton>
         </CardFooter>
       </TextCard>
     </Container>

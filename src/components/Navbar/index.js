@@ -31,7 +31,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                exact
+                
                 to="/about"
                 activeClassName="active"
                 className="nav-links"
@@ -42,7 +42,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                exact
+              
                 to="/blog"
                 activeClassName="active"
                 className="nav-links"
@@ -53,7 +53,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                exact
+                
                 to="/contact"
                 activeClassName="active"
                 className="nav-links"

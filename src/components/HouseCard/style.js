@@ -116,6 +116,8 @@ export const FooterButton = styled.button`
   height: 25px;
   width: 120px;
   background-color: crimson;
+  background: ${({ color }) => (color ? color : "#f6f8f9")};
+
 `;
 export const ImgTop = styled.div`
   position: absolute;
