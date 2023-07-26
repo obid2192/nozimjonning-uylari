@@ -29,7 +29,6 @@ import {
 export const HouseCard = ({ data = {}, gap, onClick }) => {
   const { user } = data;
 
-console.log("House Card");
 
   return (
     <div style={{ display: "flex" }} >

@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CaruselTmg from "./caruseImg";
 import { useParams } from "react-router-dom";
 import Button from "../Generic/Button";
@@ -17,26 +17,26 @@ import {
   TextRight,
   TextLeft,
   Content,
-  TextHeader
+  TextHeader,
 } from "./style";
-
-// const { REACT_APP_BASE_URL: url } = process.env;
 
 export const HouseItem = () => {
   const params = useParams();
   console.log("House Item");
 
-  // useEffect(() => {
-  //   // request({ url: `/houses/list/${params?.id}` }).then((res) =>
-  //   //   setData (res?.data || [])
-  //   // );
-  //   fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log(res);
-  //     });
-  // }, [params?.id]);
+  const { REACT_APP_BASE_URL: url } = process.env;
 
+  const [data, setData] = useState();
+  useEffect(() => {
+    fetch(`${url}`)
+      .then((res) => res.json())
+      .then((value) =>
+        setData(...value.results.filter((item) => item.id == params.id.slice(3)))
+        
+      );
+  }, [params?.id]);
+  // let res = data.find(x => {x.id === params.id.slice(3)});
+  console.log(data);
   return (
     <>
       <Container>
@@ -53,8 +53,8 @@ export const HouseItem = () => {
             dolorem iste ea soluta
           </HouseAddress>
           <Img1>
-          <CaruselTmg />
-        </Img1>
+            <CaruselTmg photo={data} />
+          </Img1>
           <TextHeader>Kelishilgan</TextHeader>
           <Content>
             <HouseText>
@@ -63,7 +63,9 @@ export const HouseItem = () => {
             </HouseText>
             <HouseText>
               <TextRight>Kvadrat:</TextRight>
-              <TextLeft>600 <sup>2</sup></TextLeft>
+              <TextLeft>
+                600 <sup>2</sup>
+              </TextLeft>
             </HouseText>
             <HouseText>
               <TextRight>Qavatlar:</TextRight>
@@ -75,7 +77,9 @@ export const HouseItem = () => {
             </HouseText>
             <HouseText>
               <TextRight>Kvadrat:</TextRight>
-              <TextLeft>600 <sup>2</sup></TextLeft>
+              <TextLeft>
+                600 <sup>2</sup>
+              </TextLeft>
             </HouseText>
             <HouseText>
               <TextRight>Qavatlar:</TextRight>
@@ -87,9 +91,10 @@ export const HouseItem = () => {
             </HouseText>
             <HouseText>
               <TextRight>Kvadrat:</TextRight>
-              <TextLeft>600 <sup>2</sup></TextLeft>
+              <TextLeft>
+                600 <sup>2</sup>
+              </TextLeft>
             </HouseText>
-            
           </Content>
           <Button width="100%">Menga qo'ng'iroq qiling </Button>
           <br />
@@ -98,7 +103,7 @@ export const HouseItem = () => {
           </Button>
         </CardTitle>
         <Img>
-          <CaruselTmg />
+          {/* <CaruselTmg photo={data} /> */}
         </Img>
       </Container>
     </>

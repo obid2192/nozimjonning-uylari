@@ -18,8 +18,10 @@ import "./style.css";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-export default function CaruselTmg() {
-  const img = [uy4, uy2, uy3, uy1, uy5, uy6];
+export default function CaruselTmg({photo}) {
+  const {urls} = photo;
+  console.log(urls, 'carusel');
+  const img = [uy1];
   return (
     <>
       <Swiper
